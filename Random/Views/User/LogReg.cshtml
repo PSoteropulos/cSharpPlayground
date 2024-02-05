@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Login and Registration";
+    Layout = "_LogRegLayout";
+}
+@model LogRegView
+<div class="text-center p-5">
+    <div class="mt-2">
+        <h1>Welcome to Quest Logs!</h1>
+        <h4>Please log in or register below.</h4>
+    </div>
+    <div class="row g-0 col-10 text-center justify-content-evenly mx-auto">
+        <div class="col-5 mt-5">
+            @await Html.PartialAsync("_Registration", Model.NewUser)
+        </div>
+        <div class="col-5 mt-5">
+            @await Html.PartialAsync("_Login", Model.NewLogin)
+        </div>
+    </div>
+</div>
